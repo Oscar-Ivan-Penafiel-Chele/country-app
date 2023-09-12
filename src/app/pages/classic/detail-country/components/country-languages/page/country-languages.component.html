@@ -1,0 +1,7 @@
+<p>Languages: 
+  <ng-container *ngFor="let language of languages; index as i">
+    <span>
+      {{language.name}}{{i != languages.length - 1 ? ', ': ''}}
+    </span>
+  </ng-container>
+</p>

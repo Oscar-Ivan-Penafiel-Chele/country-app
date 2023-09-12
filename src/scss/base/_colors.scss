@@ -1,0 +1,21 @@
+// Dark Mode
+$dark-blue: hsl(209, 23%, 22%);
+$very-dark-blue: hsl(207, 26%, 17%);
+
+//Light Mode
+$very-light-blue: hsl(200, 15%, 8%);
+$dark-gray: hsl(0, 0%, 52%);
+$very-light-gray: hsl(0, 0%, 95%);
+
+// Neutral
+$white-custom: hsl(0, 0%, 100%);
+
+//Root
+:root{
+  --dark-blue: #{$dark-blue};
+  --very-dark-blue: #{$very-dark-blue};
+  --very-light-blue: #{$very-light-blue};
+  --dark-gray: #{$dark-gray};
+  --very-light-gray: #{$very-light-gray};
+  --white-custom: #{$white-custom};
+}

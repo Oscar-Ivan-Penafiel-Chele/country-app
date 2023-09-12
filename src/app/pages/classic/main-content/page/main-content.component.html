@@ -1,0 +1,25 @@
+<section>
+  <div class="filters">
+    <app-input-search></app-input-search>
+    
+    <app-dropdown-region 
+      [regions]="regions"
+    ></app-dropdown-region>
+  </div>
+
+  <div class="main__content">
+    <ng-template [ngIf]="!isLoading && countriesLenght > 0" [ngIfElse]="noData">
+      <app-card-country
+        [countries]="countries"
+      ></app-card-country>
+    </ng-template>
+
+    <ng-template #noData>
+      <app-status-display
+        [isLoading]="isLoading"
+        [countriesLenght]="countriesLenght"
+      ></app-status-display>
+    </ng-template>
+  </div>
+
+</section>

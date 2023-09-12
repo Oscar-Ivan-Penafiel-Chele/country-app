@@ -1,0 +1,17 @@
+<section>
+  <div class="card__region" *ngFor="let country of countries" (click)="redirectDetail(country)">
+    <figure>
+      <img src="{{country.flags.png}}" alt="{{country.region}}" lazy>
+    </figure>
+    
+    <article>
+      <h2>{{country.name}}</h2>
+
+      <div class="detail__country">
+        <p>Population: <span>{{country.population | number: '1.0-0'}}</span></p> 
+        <p>Region: <span>{{country.region}}</span></p> 
+        <p>Capital: <span>{{country.capital}}</span></p> 
+      </div>
+    </article>
+  </div>
+</section>

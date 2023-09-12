@@ -1,0 +1,15 @@
+@use '../../../../../../../scss/abstracts/' as a;
+
+#regions{
+  border: none;
+  padding: .9rem 1rem;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+@include a.breakpoint('md'){
+  #regions{
+    padding: 1rem 1.5rem;
+  }
+  
+}

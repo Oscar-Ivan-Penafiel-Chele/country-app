@@ -22,7 +22,12 @@
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@interfaces": ["src/app/models/index"],
+      "@shared/components": ["src/shared/components/index"],
+      "@shared/services": ["src/shared/services/index"]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

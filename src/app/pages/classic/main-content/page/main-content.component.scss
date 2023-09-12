@@ -1,0 +1,34 @@
+@use '../../../../../scss/abstracts/' as a;
+
+section{
+  width: 100%;
+  min-height: calc(100vh - 60px);
+  max-height: max-content;
+  padding: 3rem 0rem;
+  @include a.flex(flex-start, flex-start, column, nowrap, 3rem);
+
+  .filters{
+    width: 100%;
+    height: 100%;
+    @include a.flex(space-between, center);
+  }
+
+  .main__content{
+    width: 100%;
+    height: 100%;
+    flex-grow: 1;
+  }
+}
+
+@include a.breakpoint('md'){
+  .filters{
+    width: 100%;
+    align-items: flex-start !important;
+    flex-flow: column nowrap !important;
+    gap: 2rem !important;
+  }
+
+  app-input-search{
+    width: 100%;
+  }
+}

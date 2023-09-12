@@ -1,0 +1,44 @@
+@use '../../../../../../../scss/abstracts/' as a;
+
+.detail__country__section__borders{
+  margin-top: 3rem;
+  width: 100%;
+
+  & > article{
+    @include a.flex(flex-start, center, row, wrap, .5rem);
+
+    p{
+      &:first-of-type{
+        font-family: nunito-sans-semibold-7;
+      }
+
+      &:not(:first-of-type){
+        background-color: var(--white-custom);
+        box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+        border-radius: 2px;
+        padding: .2rem 1.5rem;
+      }
+    } 
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .detail__country__section__borders{
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .detail__country__section__borders{
+    margin-top: 3rem;
+
+    & > article{
+      p{
+        &:first-of-type{
+          flex-basis: 100%;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}

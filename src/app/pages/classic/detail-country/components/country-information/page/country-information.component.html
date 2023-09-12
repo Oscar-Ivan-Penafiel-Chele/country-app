@@ -1,0 +1,31 @@
+<article class="detail__country__section">
+  
+  <h1>{{country.name}}</h1>
+  <div class="detail__country__section__information">
+    <article>
+      <p>Native name: <span>{{country.nativeName}}</span></p>
+      <p>Population: <span>{{country.population | number: '1.0-0'}}</span></p>
+      <p>Region: <span>{{country.region}}</span></p>
+      <p>Sub Region: <span>{{country.subregion}}</span></p>
+      <p>Capital: <span>{{country.capital}}</span></p>
+    </article>
+
+    <article>
+      <p>Top Level Domain: <span>{{country.topLevelDomain}}</span></p>
+      <p>Currencies: 
+        <ng-container *ngFor="let currency of country.currencies">
+          <span> {{ currency.name }} </span>
+        </ng-container>
+      </p>
+
+      <app-country-languages
+        [languages]="country.languages"
+      ></app-country-languages>
+    </article>
+  </div>
+
+  <app-country-borders
+    [borders]="country.borders"
+  ></app-country-borders>
+  
+</article>

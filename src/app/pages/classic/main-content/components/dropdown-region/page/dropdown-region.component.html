@@ -1,0 +1,5 @@
+<select name="regions" id="regions" (change)="selectRegion($event)">
+  <option value="" disabled selected hidden>Filter by region</option>
+  <option value="all">All</option>
+  <option *ngFor="let region of regions" value="{{region}}">{{region}}</option>
+</select>

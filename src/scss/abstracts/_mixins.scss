@@ -1,0 +1,14 @@
+/* manejar los width -- width: min(100%, 950px)*/
+@mixin flex(
+  $justify: flex-start, 
+  $align: flex-start, 
+  $direction: row, 
+  $pack: nowrap, 
+  $gap: 0rem)
+  {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-flow: $direction $pack;
+    gap: $gap;
+}

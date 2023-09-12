@@ -1,0 +1,15 @@
+@use '../scss/abstracts/' as a;
+
+main{
+  width: 100%;
+  min-height: calc(100vh - 60px);
+  max-height: fit-content;
+  background-color: var(--very-light-gray);
+  padding-inline: 4.5rem;
+}
+
+@include a.breakpoint('md'){
+  main{
+    padding-inline: 2rem;
+  }
+}

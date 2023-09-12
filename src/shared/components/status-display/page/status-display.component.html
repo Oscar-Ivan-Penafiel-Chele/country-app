@@ -1,0 +1,11 @@
+<section>
+  <ng-template [ngIf]="isLoading" [ngIfElse]="notFoundData">
+    <app-loader
+      [label]="MESSAGE_LOADER"
+    ></app-loader>
+  </ng-template>
+  
+  <ng-template #notFoundData>
+    <app-not-find-data></app-not-find-data>
+  </ng-template>  
+</section>

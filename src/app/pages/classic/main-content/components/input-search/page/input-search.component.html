@@ -1,0 +1,18 @@
+<div class="input__search">
+  <i class="pi pi-search"></i>
+  <input 
+    [(ngModel)]="textSearch"
+    type="text" 
+    name="search" 
+    id="search" 
+    placeholder="Search for a country..." 
+    (input)="searchCountry($event)"
+  >
+  <span 
+    *ngIf="textSearch.trim().length > 0" 
+    pRipple
+    (click)="clearSearch()"
+  >
+    <i class="pi pi-times"></i>
+  </span>
+</div>

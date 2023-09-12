@@ -1,0 +1,22 @@
+<section>
+  <button class="button__back" [routerLink]="['/']"pRipple><i class="pi pi-arrow-left"></i> <p>Back</p></button>
+
+  <ng-template [ngIf]="!isLoading && countriesLenght > 0" [ngIfElse]="notFoundData">
+    <div class="detail__country">
+      <figure class="detail__country__figure">
+        <img src="{{country.flags.png}}" alt="Imagen" loading="lazy">
+      </figure>
+      
+      <app-country-information
+        [country]="country"
+      ></app-country-information>
+    </div>
+  </ng-template>
+
+  <ng-template #notFoundData>
+    <app-status-display
+      [isLoading]="isLoading"
+      [countriesLenght]="countriesLenght"
+    ></app-status-display>
+  </ng-template>
+</section>

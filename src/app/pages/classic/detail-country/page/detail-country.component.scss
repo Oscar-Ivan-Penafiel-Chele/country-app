@@ -1,0 +1,66 @@
+@use '../../../../../scss/abstracts/' as a;
+
+section{
+  width: 100%;
+  height: 100%;
+  padding: 3.2rem 0rem;
+
+  .button__back{
+    @include a.flex(center, center,'','', .6rem);
+    background-color: var(--white-custom);
+    border: none;
+    padding: .4rem 1.7rem;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: box-shadow .2s ease-in-out;
+
+    &:hover{
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+  }
+
+  .detail__country{
+    width: 100%;
+    height: 100%;
+    margin-top: 3.2rem;
+    @include a.flex(flex-start, flex-start);
+
+    &__figure{
+      width: fit-content;
+
+      img{
+        width: 525px;
+        height: 350px;
+        background-position: center;
+        object-fit: fill;
+      }
+    }
+
+    app-country-information{
+      flex: 1;
+    }
+  }
+}
+
+@media screen and (max-width: 940px){
+  section{
+    .detail__country{
+      
+      flex-flow: column nowrap !important;
+
+      &__figure{
+        width: 100% !important;
+
+        img{
+          width: 100% !important;
+          height: 100% !important;
+        }
+      }
+    }
+
+    app-country-information{
+      width: 100%;
+    }
+  }
+}
