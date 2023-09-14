@@ -49,7 +49,10 @@ export class CountryService extends FilterCountryService{
 
   private getRegions(countries: Country[]): string[]{
     const regions = [...new Set(countries.map((country: Country) => country.region))];
-    return regions.sort();
+    const regionsSort =  regions.sort();
+          regionsSort.unshift('All');
+
+    return regionsSort;
   }
 
   private mapCountries(countries: Country[]): Country[]{

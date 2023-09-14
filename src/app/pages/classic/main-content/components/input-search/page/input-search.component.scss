@@ -6,19 +6,19 @@
 
   .pi-search{
     position: absolute;
-    top: 13px;
+    top: 32%;
     left: 17px;
     color: var(--dark-gray);
     font-size: 1rem;
   }
 
   input{
-    padding: .9rem 1rem .9rem 3rem;
+    padding: 1.2rem 1rem 1.2rem 3rem;
     width: 450px;
     border-radius: 5px;
     border: none;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    background-color: rgb(248, 248, 248);
+    background-color: var(--white-custom);
 
     &::placeholder{
       color: var(--dark-gray);
@@ -27,7 +27,7 @@
 
   span{
     position: absolute;
-    top: 9px;
+    top: 15px;
     right: 10px;
     padding: .3rem .3rem .2rem;
     border-radius: 50%;
@@ -59,7 +59,7 @@
     }
 
     span{
-      top: 14px;
+      top: 13px;
       right: 15px;
     }
   }

@@ -57,7 +57,7 @@ export class FilterCountryService {
   }
 
   filterByRegion(countries: Country[], region: string): Country[]{
-    if(region == 'all'){
+    if(region == 'All'){
       return countries;
     }
 

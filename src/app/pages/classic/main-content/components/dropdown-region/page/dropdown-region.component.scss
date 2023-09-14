@@ -1,15 +1,63 @@
 @use '../../../../../../../scss/abstracts/' as a;
 
-#regions{
-  border: none;
-  padding: .9rem 1rem;
-  border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-}
+section{
+  position: relative;
+  width: fit-content;
 
-@include a.breakpoint('md'){
+  p {
+    user-select: none;
+  }
+
   #regions{
-    padding: 1rem 1.5rem;
+    width: 195px;
+    position: relative;
+    border: none;
+    padding: 1rem 4rem 1rem 1.2rem;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    background-color: var(--white-custom);
+    cursor: pointer;
   }
   
+  i{
+    position: absolute;
+    right: 20px;
+    top: 35%;
+  }
+
+  #options{
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 110%;
+    background-color: var(--white-custom);
+    border: none;
+    padding: .5rem 0rem;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+    p{
+      width:100%;
+      padding: .3rem 1.2rem;
+      transition: background-color .2s ease-in-out;
+      cursor: pointer;
+
+      &:not(.active):hover{
+        background-color: #d0e1fd;
+      }
+    }
+
+    p-progressSpinner{
+      @include a.flex(center, center);
+    }
+  }
+}
+
+.show{
+  display: block !important;
+}
+
+.active{
+  background-color: #3B82F6;
+  color: var(--white-custom);;
 }

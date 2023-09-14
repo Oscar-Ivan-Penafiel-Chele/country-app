@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { ButtonModule } from 'primeng/button';
 import { RippleModule } from 'primeng/ripple';
 import { AnimateModule } from 'primeng/animate';
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
 
 @NgModule({
   declarations: [],
@@ -14,6 +15,8 @@ import { AnimateModule } from 'primeng/animate';
     ButtonModule,
     RippleModule,
     AnimateModule,
+    ProgressSpinnerModule,
+    
   ]
 })
 export class PrimengComponentsModule { }

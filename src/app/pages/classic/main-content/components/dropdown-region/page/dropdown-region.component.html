@@ -1,5 +1,18 @@
-<select name="regions" id="regions" (change)="selectRegion($event)">
-  <option value="" disabled selected hidden>Filter by region</option>
-  <option value="all">All</option>
-  <option *ngFor="let region of regions" value="{{region}}">{{region}}</option>
-</select>
+<section class="select">
+  <article id="regions" class="select__header" (click)="toggleVisibility()" pRipple>
+    <p>{{textPlaceHolder}}</p>
+    <i class="pi pi-angle-down"></i>
+  </article>
+
+  <article id="options" class="select__options">
+    <ng-template [ngIf]="!isLoading" [ngIfElse]="isLoadingOptions">
+      <ng-container *ngFor="let region of regions; index as index">
+        <p class="select__item" (click)="selectedRegion(region, index)" pRipple>{{region}}</p>
+      </ng-container>
+    </ng-template>
+
+    <ng-template #isLoadingOptions>
+      <p-progressSpinner styleClass="w-2rem h-2rem" strokeWidth="2" animationDuration="1s"></p-progressSpinner>
+    </ng-template>
+  </article>
+</section>
